@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+        .banner{
+            background: url("images/upload/banner.png") no-repeat;
+            background-size: cover;
+        }
+        .ar-left{
+            width: 720px;
+            overflow: hidden;
+        }
+        .ar-left h2{
+            font-size: 24px;
+            line-height: 40px;
+            font-weight: normal;
+        }
+        .ar-left p{
+            line-height: 40px;
+            color: #606060;
+        }
+        .ar-right .lov{
+            width: 249px;
+            height: 80px;
+            background: white;
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .ar-right .lov a{
+            flex: 1;
+            text-align: center;
+            line-height: 80px;
+        }
+        .ar-right .per{
+            background: white;
+            display: flex;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        .ar-right .per img{
+            flex: 0.7;
+        }
+        .ar-right .per p{
+            flex: 3;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <ul>
+        <li class="noleft">客户端</li>
+        <li>手机版</li>
+        <li>收集工具</li>
+    </ul>
+    <a href="register.html" class="first">注册</a>
+    <a href="login.html">登录</a>
+    <a href="#"><i class="fa fa-envelope-o fa-fw"></i></a>
+    <a href="#"><i class="fa fa-bullhorn fa-fw"></i></a>
+    <img src="images/upload/photos/admin.jpg" alt="">
+    <a href="#" id="username">吾爱旅行</a>
+    <script>
+        $(function () {
+            var val1=window.localStorage.getItem("username");
+            $("#username").html(val1);
+        })
+    </script>
+</header>
+<nav>
+    <img src="images/logo.png" alt="">
+    <a href="#" class="hasright">广播</a>
+    <a href="index-travel.html">发现</a>
+    <a href="article_list.html">文章</a>
+    <a href="article_list-2.html" class="hasright">心情</a>
+    <a href="article_list-3.html">专辑</a>
+    <a href="water-1.html">生活</a>
+    <a href="water-2.html">时尚</a>
+    <a href="waterfall-3.html" class="hasright">兴趣</a>
+    <a href="#" class="hasright">WiKi</a>
+    <a href="#">小组</a>
+    <div class="sear">
+        <input type="text" placeholder="请输入要查询的内容">
+        <ul class="search">
+        </ul>
+    </div>
+
+    <!--<a href="#"><i class="fa fa-search fa-fw"></i></a>-->
+    <audio src="music/m1.mp3" controls >
+
+    </audio>
+</nav>
+    <div class="banner">
+
+    </div>
+    <div class="ar-container">
+        <div class="ar-left">
+            <h2>普罗旺斯</h2>
+            <hr>
+            <p>浏览：3471&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发布日期：2013/08/24</p>
+            <img src="images/upload/plsw.png" alt="">
+            <img src="images/upload/plsw2.png" alt="">
+            <img src="images/upload/plsw3.png" alt="">
+            <hr>
+            <img src="images/ar4.png" alt="">
+        </div>
+        <div class="ar-right">
+            <div class="lov">
+                <a>收藏</a>
+                <a>喜欢</a>
+                <a>评论</a>
+            </div>
+            <div class="per">
+                <img src="images/upload/photos/use2.jpg" alt="">
+                <p>吾爱旅行 <br><br>积分：4312&nbsp; &nbsp;等级：LV4</p>
+            </div>
+            <div class="icon">
+                <img src="images/icon.png" alt="">
+            </div>
+            <div class="recommend">
+                <h4>热门推荐</h4>
+                <ul>
+                    <li>那些年，我们一起旅行过的地方</li>
+                    <li>那些年，我们一起旅行过的地方</li>
+                    <li>那些年，我们一起旅行过的地方</li>
+                    <li>那些年，我们一起旅行过的地方</li>
+                    <li>那些年，我们一起旅行过的地方</li>
+                    <li>那些年，我们一起旅行过的地方</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<footer>
+    版权所有 &copy;爱旅游
+    <a  class="feedback">
+        <i class="fa fa-envelope-o fa-fw"></i>
+        意见反馈
+    </a>
+    <a class="totop">
+        <i class="fa fa-chevron-circle-up fa-fw"></i>
+        返回顶部
+    </a>
+    <div class="feed">
+        请输入你的反馈意见：<span><i class="fa fa-close"></i></span>
+        <textarea cols="30" rows="10"></textarea>
+        <br>
+        <input type="submit">
+    </div>
+</footer>
+<script>
+    $(function () {
+        $(window).scroll(function () {
+            if($(window).scrollTop()>= $("header").height()){
+                $("header").css({
+                    position:"fixed",
+                    top:0,
+                    left:0,
+                    zIndex:100
+                });
+                $("nav").css({
+                    marginTop:"40px"
+                });
+
+                if($(window).scrollTop()>= 200) {
+                    $(".totop").show();
+                }else{
+                    $(".totop").hide();
+                }
+            }
+        })
+        $(".totop").click(function () {
+            $('html').animate(
+                { scrollTop: '0px' }, 1000
+            );
+        })
+        $(".feedback").click(function () {
+            $(this).next().next(".feed").show(1000);
+        })
+        $(".feed span i").click(function () {
+            console.log("111");
+            $(this).parent().parent().last().last().hide(1000);
+        })
+
+        $(".follow li:eq(5)").click(function () {
+            $(this).parent().next().show();
+        });
+        $(".follow .weixin").click(function () {
+            $(this).hide();
+        })
+
+    })
+
+</script>
+<script>
+    function callback(data){
+        $('nav .search').html('');
+        var str = '';
+        if(data.s.length){
+            for(var i=0;i<data.s.length;i++){
+                str +='<li><a href="http://www.baidu.com/s?wd='+data.s[i]+'">'+data.s[i]+'</a></li>';
+            };
+            $('nav .search').html(str).slideDown(100);
+        }else{
+            $('nav .search').hide();
+        }
+    }
+</script>
+<script>
+    $(function(){
+        $('nav  input').on('keyup',function(){
+            if($(this).val()!=''){
+                var $Script = $('<script><\/script>');
+                var Url = 'http://suggestion.baidu.com/su?wd='+ $(this).val() +'&cb=callback';
+                $Script.attr('src',Url);
+                $(document).append($Script);
+            }else{
+                $('nav .search').hide();
+            }
+        });
+
+    })
+
+</script>
+</body>
+</html>

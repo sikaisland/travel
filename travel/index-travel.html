@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body>
+    <header>
+       <ul>
+           <li class="noleft">客户端</li>
+           <li>手机版</li>
+           <li>收集工具</li>
+       </ul>
+            <a href="register.html" class="first">注册</a>
+            <a href="login.html">登录</a>
+            <a href="#"><i class="fa fa-envelope-o fa-fw"></i></a>
+            <a href="#"><i class="fa fa-bullhorn fa-fw"></i></a>
+            <img src="images/upload/photos/admin.jpg" alt="">
+            <a href="#" id="username">吾爱旅行</a>
+        <script>
+            $(function () {
+                var val1=window.localStorage.getItem("username");
+                $("#username").html(val1);
+            })
+        </script>
+    </header>
+    <nav>
+        <img src="images/logo.png" alt="">
+        <a href="#" class="hasright">广播</a>
+        <a href="index-travel.html">发现</a>
+        <a href="article_list.html">文章</a>
+        <a href="article_list-2.html" class="hasright">心情</a>
+        <a href="article_list-3.html">专辑</a>
+        <a href="water-1.html">生活</a>
+        <a href="water-2.html">时尚</a>
+        <a href="waterfall-3.html" class="hasright">兴趣</a>
+        <a href="#" class="hasright">WiKi</a>
+        <a href="#">小组</a>
+        <div class="sear">
+            <input type="text" placeholder="请输入要查询的内容">
+            <ul class="search">
+            </ul>
+        </div>
+
+        <!--<a href="#"><i class="fa fa-search fa-fw"></i></a>-->
+        <audio src="music/m1.mp3" controls >
+
+        </audio>
+    </nav>
+<div class="content">
+    <div class="left">
+        <div class="container">
+            <div class="view">
+               <!-- <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic3.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic4.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic5.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic6.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic7.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic8.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic9.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic10.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    &lt;!&ndash; 如果需要分页器 &ndash;&gt;
+                    <div class="swiper-pagination"></div>
+
+                    &lt;!&ndash; 如果需要导航按钮 &ndash;&gt;
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    &lt;!&ndash; 如果需要滚动条 &ndash;&gt;
+                    <div class="swiper-scrollbar"></div>
+                </div>-->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic1.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic2.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic3.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic4.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic5.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic6.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic7.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic8.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic9.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/upload/pic10.jpg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- 如果需要导航按钮 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- 如果需要滚动条 -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="life">
+                <h3>
+                    生活
+                    <span>更多>></span>
+                </h3>
+                <div class="lifepic">
+                    <div class="item">
+                        <img src="images/upload/img1.jpg" alt="">
+                        <div class="mask">
+                            <a href="water-1.html">生活：(20张)</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/upload/img2.jpg" alt="">
+                        <div class="mask">
+                            <a href="water-1.html">生活：(20张)</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/upload/img3.jpg" alt="">
+                        <div class="mask">
+                            <a href="water-1.html">生活：(20张)</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/upload/img4.jpg" alt="">
+                        <div class="mask">
+                            <a href="water-1.html">生活：(20张)</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/upload/img5.jpg" alt="">
+                        <div class="mask">
+                            <a href="water-1.html">生活：(20张)</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/upload/img6.jpg" alt="">
+                        <div class="mask">
+                            <a href="water-1.html">生活：(20张)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="fashion">
+            <h3>
+                时尚
+                <span>更多>></span>
+            </h3>
+            <div class="lifepic">
+                <div class="item">
+                    <img src="images/upload/img7.jpg" alt="">
+                    <div class="mask">
+                        <a href="water-2.html">时尚：(30张)</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/upload/img8.jpg" alt="">
+                    <div class="mask">
+                        <a href="water-2.html">时尚：(30张)</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/upload/img9.jpg" alt="">
+                    <div class="mask">
+                        <a href="water-2.html">时尚：(30张)</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/upload/img10.jpg" alt="">
+                    <div class="mask">
+                        <a href="water-2.html">时尚：(30张)</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/upload/img11.jpg" alt="">
+                    <div class="mask">
+                        <a href="water-2.html">时尚：(30张)</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/upload/img12.jpg" alt="">
+                    <div class="mask">
+                        <a href="water-2.html">时尚：(30张)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="interest">
+            <h3>
+                兴趣
+                <span>更多>></span>
+            </h3>
+            <div class="lifepic">
+                <div class="item">
+                    <img src="images/upload/img13.jpg" alt="">
+                    <div class="mask">
+                        <a href="waterfall-3.html">兴趣：(15张)</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/upload/img14.jpg" alt="">
+                    <div class="mask">
+                        <a href="waterfall-3.html">兴趣：(15张)</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/upload/img15.jpg" alt="">
+                    <div class="mask">
+                        <a href="waterfall-3.html">兴趣：(15张)</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/upload/img16.jpg" alt="">
+                    <div class="mask">
+                        <a href="waterfall-3.html">兴趣：(15张)</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/upload/img17.jpg" alt="">
+                    <div class="mask">
+                        <a href="waterfall-3.html">兴趣：(15张)</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/upload/img18.jpg" alt="">
+                    <div class="mask">
+                        <a href="waterfall-3.html">兴趣：(15张)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fashion">
+            <h3>
+                时尚
+                <span>更多>></span>
+            </h3>
+            <div class="lifepic">
+                <div class="item">
+                    <img src="images/upload/img7.jpg" alt="">
+                    <div class="mask">
+                        <a href="water-2.html">时尚：(30张)</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/upload/img8.jpg" alt="">
+                    <div class="mask">
+                        <a href="water-2.html">时尚：(30张)</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/upload/img9.jpg" alt="">
+                    <div class="mask">
+                        <a href="water-2.html">时尚：(30张)</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/upload/img10.jpg" alt="">
+                    <div class="mask">
+                        <a href="water-2.html">时尚：(30张)</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/upload/img11.jpg" alt="">
+                    <div class="mask">
+                        <a href="water-2.html">时尚：(30张)</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/upload/img12.jpg" alt="">
+                    <div class="mask">
+                        <a href="water-2.html">时尚：(30张)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="recommend">
+            <h3>热门推荐</h3>
+            <img src="images/upload/img1.jpg" alt="">
+            <img src="images/index.png" alt="">
+        </div>
+        <div class="tag">
+            <h4>热门标签</h4>
+            <p>
+                <span>标签</span> 登山 自驾车  <i>骑车</i> <br>
+                <i>自然</i> 徒步 兴趣 <span>心情</span> <i>户外</i> <br>
+                <span>景色</span> 大海 骑车 <span>大海</span> <br>
+                徒步 天气 <span>心情</span> <i>景色</i> <i>自然</i> <br>
+                <span>驴友</span>
+            </p>
+        </div>
+        <div class="video">
+            <h4>视频</h4>
+            <video src="video/movie.mp4" width="100%" controls poster='images/load.jpg'>
+            </video>
+            <p>
+                影片描述在冰河纪这个充满惊喜与危险的蛮荒时代，因为一名突如其来的人类弃婴，
+                让三只性格迥异的动物不得不凑在一起，这三只史前动物不但要充当小宝宝的保姆，
+                还要历经冰河与冰山各种千惊万险护送他回家。
+            </p>
+            <script>
+                var video = $('video')[0];
+                video.onclick = function(){
+                    if(video.paused){
+                        video.play();
+                        playBtn.classList.remove('icon-play');
+                        playBtn.classList.add('icon-pause');
+                    }else{
+                        video.pause();
+                        playBtn.classList.add('icon-play');
+                        playBtn.classList.remove('icon-pause');
+                    }
+                }
+                function requestFullScreen(element){
+                    var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
+                    if(requestMethod){
+                        requestMethod.call(element);
+                    }else if(typeof window.ActiveXObject!=='undefined'){
+                        //创建Wsshell对象，可以调用系统程序，注册表，，，，，
+                        var wsShell = new ActiveXObject('WSript.shell');
+                        //---F11
+                        if(wsShell!==null){
+                            wsShell.SendKeys('{F11}');
+                        }
+                    }
+                }
+                //取消全屏
+                function  cancelFullScreen(element){
+                    var cancelMethod = element.cancelFullScreen || element.webkitCancelFullScreen || element.mozRequestCancelFullScreen || element.msCancelFullScreen;
+                    if(cancelMethod){
+                        cancelMethod.call(element);
+                    }else if(typeof window.ActiveXObject!=='undefined'){
+                        //创建Wsshell对象，可以调用系统程序，注册表，，，，，
+                        var wsShell = new ActiveXObject('WSript.shell');
+                        //---F11
+                        if(wsShell!==null){
+                            wsShell.SendKeys('{F11}');
+                        }
+                    }
+                }
+                function fullorcallScreen(element){
+                    //--点击的次数
+                    var count = 0;
+                    element.addEventListener('dblclick',function(){
+                        if(count%2==0){
+                            requestFullScreen(element);
+                        }else{
+                            cancelFullScreen(document);
+                        };
+                        count++;
+                    },false);
+                }
+                fullorcallScreen(video);
+            </script>
+        </div>
+        <div class="activity">
+            <h4>主题活动 <span>更多>></span></h4>
+            <img src="images/upload/act1.gif" alt="">
+            <p>晒晒你的DIY成果[一周一主题]</p>
+            <p class="sp">截止日期：2017年10月31日</p>
+        </div>
+        <div class="travel clearfix">
+            <h4>旅行日志 <span>更多>></span></h4>
+            <img src="images/upload/arc1.jpg" alt="">
+            <p >
+                远行，流浪！ <br>
+                推荐数:362
+            </p>
+            <ul>
+                <li class="topborder">带着年轻的心去流浪</li>
+                <li>带着年轻的心去流浪</li>
+                <li>带着年轻的心去流浪</li>
+                <li>带着年轻的心去流浪</li>
+                <li>带着年轻的心去流浪</li>
+            </ul>
+        </div>
+        <div class="vip">
+            <h4>活跃会员</h4>
+            <ul>
+                <li>
+                    <img src="images/upload/photos/use1.jpg" alt="">
+                    <p>
+                        作响_ <br>
+                        发布30 专辑5
+                    </p>
+                </li>
+                <li>
+                    <img src="images/upload/photos/use2.jpg" alt="">
+                    <p>
+                        丹顶鹤 <br>
+                        发布30 专辑5
+                    </p>
+                </li>
+                <li>
+                <img src="images/upload/photos/use3.jpg" alt="">
+                <p>
+                    的阿克 <br>
+                    发布30 专辑5
+                </p>
+            </li>
+                <li>
+                    <img src="images/upload/photos/use4.jpg" alt="">
+                    <p>
+                        四阿卡 <br>
+                        发布30 专辑5
+                    </p>
+                </li>
+                <li>
+                    <img src="images/upload/photos/use5.jpg" alt="">
+                    <p>
+                        雪木琪<br>
+                        发布30 专辑5
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="follow">
+            <h4>关注我们</h4>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="weixin">
+
+            </div>
+        </div>
+    </div>
+</div>
+    <footer>
+        版权所有 &copy;爱旅游
+        <a  class="feedback">
+            <i class="fa fa-envelope-o fa-fw"></i>
+            意见反馈
+        </a>
+        <a class="totop">
+            <i class="fa fa-chevron-circle-up fa-fw"></i>
+            返回顶部
+        </a>
+        <div class="feed">
+            请输入你的反馈意见：<span><i class="fa fa-close"></i></span>
+            <textarea cols="30" rows="10"></textarea>
+            <br>
+            <input type="submit">
+        </div>
+    </footer>
+    <!--固定导航、返回顶部-->
+    <script>
+        $(function () {
+           $(window).scroll(function () {
+               if($(window).scrollTop()>= $("header").height()){
+                   $("header").css({
+                       position:"fixed",
+                       top:0,
+                       left:0,
+                       zIndex:100
+                   });
+                   $("nav").css({
+                       marginTop:"40px"
+                   });
+
+                   if($(window).scrollTop()>= 200) {
+                       $(".totop").show();
+                   }else{
+                       $(".totop").hide();
+                   }
+               }
+           })
+            $(".totop").click(function () {
+                $('html').animate(
+                    { scrollTop: '0px' }, 1000
+                );
+            })
+            $(".feedback").click(function () {
+                $(this).next().next(".feed").show(1000);
+            })
+            $(".feed span i").click(function () {
+                console.log("111");
+                $(this).parent().parent().last().last().hide(1000);
+            })
+
+            $(".follow li:eq(5)").click(function () {
+                    $(this).parent().next().show();
+            });
+           $(".follow .weixin").click(function () {
+               $(this).hide();
+           })
+
+        })
+
+    </script>
+    <!--轮播-->
+    <script src="js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop:true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <!--模拟百度搜索接口-->
+    <script>
+        function callback(data){
+            $('nav .search').html('');
+            var str = '';
+            if(data.s.length){
+                for(var i=0;i<data.s.length;i++){
+                    str +='<li><a href="http://www.baidu.com/s?wd='+data.s[i]+'">'+data.s[i]+'</a></li>';
+                };
+                $('nav .search').html(str).slideDown(100);
+            }else{
+                $('nav .search').hide();
+            }
+        }
+    </script>
+    <script>
+        $(function(){
+            $('nav  input').on('keyup',function(){
+                if($(this).val()!=''){
+                    var $Script = $('<script><\/script>');
+                    var Url = 'http://suggestion.baidu.com/su?wd='+ $(this).val() +'&cb=callback';
+                    $Script.attr('src',Url);
+                    $(document).append($Script);
+                }else{
+                    $('nav .search').hide();
+                }
+            });
+
+            $(".lifepic .item").mouseenter(function () {
+                $(this).children(".mask").show();
+            })
+            $(".lifepic .item").mouseleave(function () {
+                $(this).children(".mask").hide();
+            })
+        })
+
+    </script>
+</body>
+</html>

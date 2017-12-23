@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+        #container{
+            width: 985px;
+            height: auto;
+            margin: 20px auto;
+            background: #f9f9f9;
+        }
+        #container ul{
+            position: relative;
+        }
+        #container ul li{
+            width: 200px;
+            position: absolute;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        #container ul li .mask{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,191,255,0.3);
+            display: none;
+        }
+        #container ul li p{
+            font-size: 14px;
+        }
+        img {
+            width: 100%;
+            height: 200px;
+        }
+        img.lazy{
+            width: 100%;
+            height: 150px;
+        }
+        .tips {
+            width:100%;
+            height:40px;
+            margin:20px auto;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            font-size:16px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+<body>
+<header>
+    <ul>
+        <li class="noleft">客户端</li>
+        <li>手机版</li>
+        <li>收集工具</li>
+    </ul>
+    <a href="register.html" class="first">注册</a>
+    <a href="login.html">登录</a>
+    <a href="#"><i class="fa fa-envelope-o fa-fw"></i></a>
+    <a href="#"><i class="fa fa-bullhorn fa-fw"></i></a>
+    <img src="images/upload/photos/admin.jpg" alt="">
+    <a href="#" id="username">吾爱旅行</a>
+    <script>
+        $(function () {
+            var val1=window.localStorage.getItem("username");
+            $("#username").html(val1);
+        })
+    </script>
+</header>
+<nav>
+    <img src="images/logo.png" alt="">
+    <a href="#" class="hasright">广播</a>
+    <a href="index-travel.html">发现</a>
+    <a href="article_list.html">文章</a>
+    <a href="article_list-2.html" class="hasright">心情</a>
+    <a href="article_list-3.html">专辑</a>
+    <a href="water-1.html">生活</a>
+    <a href="water-2.html">时尚</a>
+    <a href="waterfall-3.html" class="hasright">兴趣</a>
+    <a href="#" class="hasright">WiKi</a>
+    <a href="#">小组</a>
+    <div class="sear">
+        <input type="text" placeholder="请输入要查询的内容">
+        <ul class="search">
+        </ul>
+    </div>
+
+    <!--<a href="#"><i class="fa fa-search fa-fw"></i></a>-->
+    <audio src="music/m1.mp3" controls >
+
+    </audio>
+</nav>
+
+<div id="container">
+    <ul class="sp">
+        <li>
+            <img  class="lazy" src="images/upload/img1.jpg" >
+            <p>
+                风住尘香花已尽，日晚倦梳头。物是人非事事休，欲语泪先流。
+                闻说双溪春尚好，也拟泛轻舟。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img2.jpg" >
+            <p>
+                驿外断桥边，寂寞开无主。已是黄昏独自愁，更著风和雨。
+                无意苦争春，一任群芳妒。零落成泥碾作尘，只有香如故。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img3.jpg" >
+            <p>
+                寒蝉凄切，对长亭晚，骤雨初歇。
+                都门帐饮无绪，留恋处，兰舟催发。
+                执手相看泪眼，竟无语凝噎。念去去，千里烟波，暮霭沉沉楚天阔。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img4.jpg" >
+            <p>
+                一曲新词酒一杯，去年天气旧亭台。夕阳西下几时回？
+                无可奈何花落去，似曾相识燕归来。小园香径独徘徊。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img5.jpg" >
+            <p>
+                纤云弄巧，飞星传恨，银汉迢迢暗度。金风玉露一相逢，便胜却人间无数。(度 通：渡)
+                柔情似水，佳期如梦，忍顾鹊桥归路。两情若是久长时，又岂在朝朝暮暮。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img6.jpg" >
+            <p>
+                庭院深深，不知有多深？杨柳依依，飞扬起片片烟雾，一重重帘幕不知有多少层。
+                豪华的车马停在贵族公子寻欢作乐的地方，她登楼向远处望去，却看不见那通向章台的大路。
+                春已至暮，三月的雨伴随着狂风大作，再是重门将黄昏景色掩闭，也无法留住春意。
+                泪眼汪汪问落花可知道我的心意，落花默默不语，纷乱的，零零落落一点一点飞到秋千外。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img7.jpg" >
+            <p>
+                世事一场大梦，人生几度秋凉？夜来风叶已鸣廊。看取眉头鬓上。(秋凉 一作：新凉)
+                酒贱常愁客少，月明多被云妨。中秋谁与共孤光。把盏凄然北望。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img8.jpg" >
+            <p>
+                一曲新词酒一杯，去年天气旧亭台。夕阳西下几时回？
+                无可奈何花落去，似曾相识燕归来。小园香径独徘徊。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img9.jpg" >
+            <p>
+                纤云弄巧，飞星传恨，银汉迢迢暗度。金风玉露一相逢，便胜却人间无数。(度 通：渡)
+                柔情似水，佳期如梦，忍顾鹊桥归路。两情若是久长时，又岂在朝朝暮暮。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img10.jpg" >
+            <p>
+                庭院深深，不知有多深？杨柳依依，飞扬起片片烟雾，一重重帘幕不知有多少层。
+                豪华的车马停在贵族公子寻欢作乐的地方，她登楼向远处望去，却看不见那通向章台的大路。
+                春已至暮，三月的雨伴随着狂风大作，再是重门将黄昏景色掩闭，也无法留住春意。
+                泪眼汪汪问落花可知道我的心意，落花默默不语，纷乱的，零零落落一点一点飞到秋千外。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img11.jpg" >
+            <p>
+                世事一场大梦，人生几度秋凉？夜来风叶已鸣廊。看取眉头鬓上。(秋凉 一作：新凉)
+                酒贱常愁客少，月明多被云妨。中秋谁与共孤光。把盏凄然北望。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img12.jpg" >
+            <p>
+                一曲新词酒一杯，去年天气旧亭台。夕阳西下几时回？
+                无可奈何花落去，似曾相识燕归来。小园香径独徘徊。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img13.jpg" >
+            <p>
+                纤云弄巧，飞星传恨，银汉迢迢暗度。金风玉露一相逢，便胜却人间无数。(度 通：渡)
+                柔情似水，佳期如梦，忍顾鹊桥归路。两情若是久长时，又岂在朝朝暮暮。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img14.jpg" >
+            <p>
+                庭院深深，不知有多深？杨柳依依，飞扬起片片烟雾，一重重帘幕不知有多少层。
+                豪华的车马停在贵族公子寻欢作乐的地方，她登楼向远处望去，却看不见那通向章台的大路。
+                春已至暮，三月的雨伴随着狂风大作，再是重门将黄昏景色掩闭，也无法留住春意。
+                泪眼汪汪问落花可知道我的心意，落花默默不语，纷乱的，零零落落一点一点飞到秋千外。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img15.jpg" >
+            <p>
+                世事一场大梦，人生几度秋凉？夜来风叶已鸣廊。看取眉头鬓上。(秋凉 一作：新凉)
+                酒贱常愁客少，月明多被云妨。中秋谁与共孤光。把盏凄然北望。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img16.jpg" >
+            <p>
+                年年雪里，常插梅花醉。挼尽梅花无好意，赢得满衣清泪。
+                今年海角天涯，萧萧两鬓生华。看取晚来风势，故应难看梅花。
+                只恐双溪舴艋舟，载不动许多愁。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img16.jpg" >
+            <p>
+                我自己并不是生性喜好风尘生活，之所以沦落风尘，是为前生的因缘（即所谓宿命）所致花落花开自有一定的时候，可这一切都只能依靠司其之神东君来作主。
+                该离终须要离开，离开这里又如何能待下去。若能将山花插满头，不需要问我归向何处。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img17.jpg" >
+            <p>
+                山抹微云，天连衰草，画角声断谯门。
+                暂停征棹，聊共引离尊。多少蓬莱旧事，空回首、烟霭纷纷。斜阳外，寒鸦万点，流水绕孤村。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img18.jpg" >
+            <p>
+                雨恨云愁，江南依旧称佳丽。水村渔市。一缕孤烟细。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img14.jpg" >
+            <p>
+                世事一场大梦，人生几度秋凉？夜来风叶已鸣廊。看取眉头鬓上。(秋凉 一作：新凉)
+                酒贱常愁客少，月明多被云妨。中秋谁与共孤光。把盏凄然北望。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img8.jpg" >
+            <p>
+                世上万事恍如一场大梦，人生经历了几度新凉的秋天？
+                到了晚上，风吹动树叶发出的声音，响彻回廊里，看看自己，眉头鬓上又多了几根银丝。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img4.jpg" >
+            <p>
+                年年雪里，常插梅花醉。挼尽梅花无好意，赢得满衣清泪。
+                今年海角天涯，萧萧两鬓生华。看取晚来风势，故应难看梅花。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img3.jpg" >
+            <p>
+                我自己并不是生性喜好风尘生活，之所以沦落风尘，是为前生的因缘（即所谓宿命），可这一切都只能依靠司其之神东君来作主。
+                该离终须要离开，离开这里又如何能待下去。若能将山花插满头，不需要问我归向何处。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img11.jpg" >
+            <p>
+                世事一场大梦，人生几度秋凉？夜来风叶已鸣廊。看取眉头鬓上。(秋凉 一作：新凉)
+                酒贱常愁客少，月明多被云妨。中秋谁与共孤光。把盏凄然北望。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img5.jpg" >
+            <p>
+                一曲新词酒一杯，去年天气旧亭台。夕阳西下几时回？
+                无可奈何花落去，似曾相识燕归来。小园香径独徘徊。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img17.jpg" >
+            <p>
+                纤云弄巧，飞星传恨，银汉迢迢暗度。金风玉露一相逢，便胜却人间无数。(度 通：渡)
+                柔情似水，佳期如梦，忍顾鹊桥归路。两情若是久长时，又岂在朝朝暮暮。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img14.jpg" >
+            <p>
+                年年雪里，常插梅花醉。挼尽梅花无好意，赢得满衣清泪。
+                今年海角天涯，萧萧两鬓生华。看取晚来风势，故应难看梅花。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+        <li>
+            <img  class="lazy" src="images/upload/img10.jpg" >
+            <p>
+                我自己并不是生性喜好风尘生活，之所以沦落风尘，是为前生的因缘（即所谓宿命），可这一切都只能依靠司其之神东君来作主。
+                该离终须要离开，离开这里又如何能待下去。若能将山花插满头，不需要问我归向何处。
+            </p>
+            <div class="mask">
+
+            </div>
+        </li>
+    </ul>
+
+</div>
+<footer>
+    版权所有 &copy;爱旅游
+    <a  class="feedback">
+        <i class="fa fa-envelope-o fa-fw"></i>
+        意见反馈
+    </a>
+    <a class="totop">
+        <i class="fa fa-chevron-circle-up fa-fw"></i>
+        返回顶部
+    </a>
+    <div class="feed">
+        请输入你的反馈意见：<span><i class="fa fa-close"></i></span>
+        <textarea cols="30" rows="10"></textarea>
+        <br>
+        <input type="submit">
+    </div>
+</footer>
+<script type="text/javascript" src='js/waterfall-3.11.js'></script>
+<script type="text/javascript" src='js/template-native.js'></script>
+<script id="template" type="text/html">
+    <%for(var i=0;i<items.length;i++){%>
+    <li>
+        <img src="<%=items[i].path%>" alt="">
+        <p><%=items[i].text%></p>
+        <div class="mask">
+        </div>
+    </li>
+    <%}%>
+</script>
+<script>
+    $("ul.sp").waterfall("li");
+
+    function getData(){
+        $.ajax({
+            url:"waterfall.php",
+            dataType:"json",
+            success:function(data){
+                var html=template("template",data);
+                $("ul.sp").append(html);
+                $("ul.sp").waterfall("li");
+            }
+        })
+    }
+    $(".feedback").click(function () {
+        $(this).next().next(".feed").show(1000);
+    })
+    $(".feed span i").click(function () {
+        console.log("111");
+        $(this).parent().parent().last().last().hide(1000);
+    })
+
+    /*  $("ul.sp li").mouseenter(function () {
+          $(this).children(".mask").show();
+      })
+      $("ul.sp li").mouseleave(function () {
+          $(this).children(".mask").hide();
+      })*/
+
+    $(window).scroll(function () {
+        if($(window).scrollTop()>= $("header").height()){
+            $("header").css({
+                position:"fixed",
+                top:0,
+                left:0,
+                zIndex:100
+            });
+            $("nav").css({
+                marginTop:"40px"
+            });
+
+        }
+    })
+
+    $("ul.sp").on("mouseenter","li",function () {
+        $(this).children(".mask").show();
+    })
+    $("ul.sp").on("mouseleave","li",function () {
+        $(this).children(".mask").hide();
+    })
+
+
+</script>
+<script>
+    function callback(data){
+        $('nav .search').html('');
+        var str = '';
+        if(data.s.length){
+            for(var i=0;i<data.s.length;i++){
+                str +='<li><a href="http://www.baidu.com/s?wd='+data.s[i]+'">'+data.s[i]+'</a></li>';
+            };
+            $('nav .search').html(str).slideDown(100);
+        }else{
+            $('nav .search').hide();
+        }
+    }
+</script>
+<script>
+    $(function(){
+        $('nav  input').on('keyup',function(){
+            if($(this).val()!=''){
+                var $Script = $('<script><\/script>');
+                var Url = 'http://suggestion.baidu.com/su?wd='+ $(this).val() +'&cb=callback';
+                $Script.attr('src',Url);
+                $(document).append($Script);
+            }else{
+                $('nav .search').hide();
+            }
+        });
+
+    })
+
+</script>
+</body>
+</html>
